@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Labyrinthe" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <title>Labyrinthe</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <h1 class="main-header-title">Labyrinthe <span>d'Halloween</span></h1>
+  </header>
+  <div class="container">
+    <table></table>
+    <button class="btn win">Félicitation ! <span>Niveau suivant</span></button>
+    <button class="btn fail">Wouuhooouu <span>Il reste des bonbons à manger !</span></button>
+  </div>
+  <p class="candy-nbr">Nombre de bonbons mangés : <span class="nbr">0</span><img class="candy-img" src="./images/candy.png" alt="image bonbon"></p>
+  <div class="joystick">
+    <a href="#"><img class="arrow" id="up" src="./images/circle-up-solid.svg" alt="Fleche haut" /></a>
+    <div>
+      <a href="#"><img class="arrow" id="left" src="./images/circle-left-solid.svg" alt="Fleche gauche" /></a>
+      <a href="#"><img id="none" src="./images/circle-left-solid.svg" alt="Fleche gauche" /></a>
+      <a href="#"><img class="arrow" id="right" src="./images/circle-right-solid.svg" alt="Fleche droite" /></a>
+    </div>
+    <a href="#"><img class="arrow" id="down" src="./images/circle-down-solid.svg" alt="Fleche bas" /></a>
+  </div>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>
