@@ -1,0 +1,10 @@
+0 = mur
+1 = espace vide
+2 = bonbons
+3
+4
+5
+6
+7
+8
+9 = joueur

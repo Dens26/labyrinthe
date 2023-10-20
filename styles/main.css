@@ -16,11 +16,25 @@ body{
   font-weight: 400;
   font-size: 1.5rem;
 }
+.main-header-title span{
+  font-weight: 700;
+}
 img {
   width: 45px;
 }
-.main-header-title span{
-  font-weight: 700;
+.player-img{
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+}
+.way-img{
+  width: 1px;
+  height: 1px;
+}
+.witch-img{
+  width: 17px;
+  height: 17px;
+  object-fit: cover;
 }
 .joystick {
   display: flex;
@@ -39,9 +53,12 @@ img {
   visibility: hidden;
 }
 .container {
-  display: flex;
   justify-content: center;
   position: relative;
+  background: palegoldenrod;
+  width: 360px;
+
+  margin: 0 auto;
 }
 td {
   width: 20px;
@@ -50,23 +67,35 @@ td {
 .wall {
   background: rgb(58, 58, 85);
 }
+.nothing{
+  background:  rgb(238, 232, 170);
+}
+.player{
+  background:  rgb(238, 232, 170);
+}
 .candy-nbr{
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   gap: 0.5rem;
   font-size: 1rem;
 }
 .candy-img {
   width: 20px;
 }
+.door-img, .key-img{
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+}
 .btn{
   display: none;
   position: absolute;
-  top: 40%;
-  font-size: 2rem;
+  top: 30%;
+  font-size: 1.8rem;
   font-weight: 650;
   border: none;
   border-radius: 15px;
@@ -80,17 +109,73 @@ td {
   display: block;
 }
 .win{
-  width: 300px;
-  height: 100px;
-}
-.fail{
-  width: 350px;
+  width: 355px;
   height: 150px;
 }
+.fail{
+  width: 355px;
+  height: 150px;
+}
+.dialogue{
+  display: none;
+  flex-flow: column;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 290px;
+  height: 200px;
+  border: 3px solid rgb(26, 26, 26);
+  border-radius: 15px;
+  background: linear-gradient(90deg, rgb(121, 121, 121), rgb(192, 192, 192));
+}
+.dialogue-pnj-name{
+  color: black;
+  text-shadow: 0.5px 0.5px orange;
+  font-weight: 700;
+  display: block;
+  padding: 10px;
+}
+.dialogue-pnj-message{
+  display: block;
+  color: black;
+  font-weight: 550;
+  text-shadow: 0.5px 0.5px orange;
+  padding: 5px;
+  text-align: left;
+}
+.dialogue-btn{
+  margin-top: 10px;
+  display: block;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 650;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 2px 2px black;
+  background: rgb(238, 131, 0);
+}
 @media screen and (min-width: 576px) {
+  .dialogue{
+    top: 25%;
+    left: 15%;
+    width: 360px;
+    height: 180px;
+  }
   .main-header-title{
     font-size: 2.5rem;
     padding: 15px;
+  }
+  .container {
+    width: 545px;
+  }
+  .player-img, .way-img{
+    width: 30px;
+    height: 25px;
+  }
+  .witch-img{
+    width: 26px;
+    height: 26px;
   }
   td {
     width: 30px;
@@ -104,11 +189,37 @@ td {
   .candy-img {
     width: 30px;
   }
+  .door-img, .key-img{
+    width: 30px;
+    height: 30px;
+  }
+  .btn{
+    top: 40%;
+    left: 15%;
+    font-size: 1.8rem;
+  }
 }
 @media screen and (min-width: 768px) {
+  .dialogue{
+    top: 35%;
+    left: 25%;
+    width: 400px;
+    height: 180px;
+  }
   .main-header-title{
     font-size: 3.5rem;
     padding: 20px;
+  }
+  .container {
+    width: 750px;
+  }
+  .player-img, .way-img{
+    width: 45px;
+    height: 40px;
+  }
+  .witch-img{
+    width: 41px;
+    height: 41px;
   }
   td {
     width: 45px;
@@ -121,6 +232,15 @@ td {
   }
   .candy-img {
     width: 45px;
+  }
+  .door-img, .key-img{
+    width: 45px;
+    height: 45px;
+  }
+  .btn{
+    top: 40%;
+    left: 25%;
+    font-size: 1.8rem;
   }
 }
 @keyframes rotation {
