@@ -52,6 +52,12 @@ win.addEventListener("click", () => {
   else if (lvl == 3) {
     tab = level.niveau4;
   }
+  else if (lvl == 4) {
+    tab = level.niveau5;
+  }
+  else if (lvl == 5) {
+    tab = level.niveau6;
+  }
   lvl++;
   playerPosition = [7, 1];
   CreateLabyrinthe(tab);
@@ -62,11 +68,7 @@ const quest = document.querySelector(".dialogue-btn");
 quest.addEventListener("click", () => {
   dialogue.style.cssText = "display:none;";
   if (quest.textContent == "Recommencer") {
-    table.textContent = "";
-    nbr = 0;
-    lvl = 1;
-    tab = level.niveau1;
-    CreateLabyrinthe(tab);
+    location.relaod();
   }
   else if (quest.textContent == "Accepter") {
     table.textContent = "";
@@ -180,7 +182,7 @@ function MoveVerification(xDirection, yDirection) {
         dialogue.style.cssText = "display:flex;"
         canMove = false;
       }
-      else if (nbr.textContent != "12") {
+      else if (nbr.textContent != "20") {
         dialoguePnjName.textContent = "La sorcière enchanté :";
         dialoguePnjMessage.textContent = "Bonjour petit fantome d'Halloween. Il me manque encore des bonbons pour la fête.";
         dialogue.style.cssText = "display:flex;"
